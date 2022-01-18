@@ -56,7 +56,6 @@ export default {
     }),
     handleBuyStock(stock) {
       let order = { ...stock, quantity: parseInt(this.quantity) };
-      
 
       this.buyStock(order);
 

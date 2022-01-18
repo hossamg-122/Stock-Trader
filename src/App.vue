@@ -9,28 +9,28 @@
 
 <script>
 import NavBar from "./components/NavBar.vue";
-import { mapMutations,mapGetters,mapActions } from "vuex";
+import { mapMutations, mapGetters, mapActions } from "vuex";
 import * as types from "./store/types";
 export default {
   components: {
     NavBar
   },
- computed: {
+  computed: {
     ...mapGetters({
       funds: types.GET_FUNDS,
       userData: types.GET_USER_DATA
-    })}
-  ,
+    })
+  },
   methods: {
     ...mapMutations({
       initStocks: types.INIT_STOCKS
     }),
     ...mapActions({
-      autoLogin:types.AUTO_LOGIN
+      autoLogin: types.AUTO_LOGIN
     })
   },
   created() {
-    this.autoLogin()
+    this.autoLogin();
     this.initStocks();
   }
 };

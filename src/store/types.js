@@ -12,11 +12,11 @@ export const SET_STOCKS = "stock/SET_STOCKS";
 export const SET_MYSTOCKS = "portfolio/SET_MYSTOCKS";
 export const SET_FUNDS = "portfolio/SET_FUNDS";
 export const SET_USER_DATA = "auth/SET_USER_DATA";
-export const LOGOUT_USER ="auth/LOGOUT_USER"
+export const LOGOUT_USER = "auth/LOGOUT_USER";
 
 // ations types
 export const SAVE_DATA = "SAVE_DATA";
 export const LOAD_DATA = "LOAD_DATA";
 export const SIGN_UP = "SIGN_UP";
 export const SIGN_IN = "SIGN_IN";
-export const AUTO_LOGIN = "auth/AUTO_LOGIN"
+export const AUTO_LOGIN = "auth/AUTO_LOGIN";

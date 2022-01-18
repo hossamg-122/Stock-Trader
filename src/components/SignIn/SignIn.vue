@@ -43,8 +43,13 @@
           <div class="col-sm-offset-2 col-sm-4">
             <button type="submit" class="btn btn-default">SIGN IN</button>
           </div>
-           <div class=" col-sm-4">
-            <button  class="btn btn-default" @click.prevent="$router.replace('/sign-up')" >Register</button>
+          <div class=" col-sm-4">
+            <button
+              class="btn btn-default"
+              @click.prevent="$router.replace('/sign-up')"
+            >
+              Register
+            </button>
           </div>
         </div>
       </form>
@@ -66,7 +71,7 @@ export default {
     };
   },
   methods: {
-     ...mapActions({
+    ...mapActions({
       signIn: types.SIGN_IN
     }),
     handleSubmit() {
@@ -75,8 +80,7 @@ export default {
       } else {
         this.signIn(this.userData);
       }
-    },
-   
+    }
   }
 };
 </script>
@@ -89,7 +93,7 @@ export default {
   margin: 4% 0;
   position: relative;
   border-radius: 20px;
-    box-shadow: 5px 5px 5px 5px rgb(167, 164, 164);
+  box-shadow: 5px 5px 5px 5px rgb(167, 164, 164);
 }
 .sign-up-box {
   position: absolute;

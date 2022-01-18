@@ -2,33 +2,35 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <router-link :to="'/home/'+$route.params.id" exact ><a class="navbar-brand">Brand</a></router-link>
+        <router-link :to="'/home/' + $route.params.id" exact
+          ><a class="navbar-brand">Brand</a></router-link
+        >
       </div>
 
       <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav" 
-        v-if="userData.token">
-          <router-link :to="'/stocks/'+$route.params.id" tag="li" active-class="active" 
+        <ul class="nav navbar-nav" v-if="userData.token">
+          <router-link
+            :to="'/stocks/' + $route.params.id"
+            tag="li"
+            active-class="active"
             ><a>Stocks</a></router-link
           >
-          <router-link :to="'/portofolio/'+$route.params.id" tag="li" active-class="active"
+          <router-link
+            :to="'/portofolio/' + $route.params.id"
+            tag="li"
+            active-class="active"
             ><a>Portfolio</a></router-link
           >
         </ul>
-        <ul 
-        class="nav navbar-nav navbar-right" 
-        v-else
-        >
-          <router-link to="/sign-in" tag="li" active-class="active" 
+        <ul class="nav navbar-nav navbar-right" v-else>
+          <router-link to="/sign-in" tag="li" active-class="active"
             ><a>SIGN IN</a></router-link
           >
           <router-link to="/sign-up" tag="li" active-class="active"
             ><a>SIGN UP</a></router-link
           >
         </ul>
-        <ul class="nav navbar-nav navbar-right" 
-        v-if="userData.token"
-        >
+        <ul class="nav navbar-nav navbar-right" v-if="userData.token">
           <li @click="resetPrices"><a href="#">End Day</a></li>
 
           <li

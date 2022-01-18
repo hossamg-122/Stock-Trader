@@ -49,7 +49,7 @@ const actions = {
       const { data } = await firebase.get(
         `/users/${userId}.json?auth=${token}`
       );
-     
+
       if (data) {
         commit(types.SET_FUNDS, data.funds);
         commit(types.SET_MYSTOCKS, data.portfolioStocks);
